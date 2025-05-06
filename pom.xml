@@ -9,13 +9,26 @@
 
 	<name>cicdproject</name>
 
-	<properties>
+	
+<properties>
+    <anypoint.username>bhargavsai0510</anypoint.username>
+    <anypoint.password>Bhargavsaii12@</anypoint.password>
+    <env>Sandbox </env>
+    <appname>cicdProject</appname>
+    <business>MDW</business>
+    <vCore>1</vCore>
+    <workers>1</workers>
+
+
+	
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<app.runtime>4.9.2</app.runtime>
 		<mule.maven.plugin.version>4.3.0</mule.maven.plugin.version>
-	</properties>
+		
+	
+</properties>
 
 	<build>
 		<plugins>
@@ -32,18 +45,18 @@
 				
 				<configuration>
                 <cloudHubDeployment>
-                    <uri>https://anypoint.mulesoft.com</uri>
-                    <muleVersion>${mule.version}</muleVersion>
-                    <username>${anypoint.username}</username>
-                    <password>${anypoint.password}</password>
-                    
-                    <environment>${env}</environment>
-                    <applicationName>${appname}</applicationName>
-                    <businessGroup>${business}</businessGroup>
-                    <workerType>${vCore}</workerType>
-                    <workers>${workers}</workers>
-                    <objectStoreV2>true</objectStoreV2>
-                </cloudHubDeployment>
+    <uri>https://anypoint.mulesoft.com</uri>
+    <muleVersion>${app.runtime}</muleVersion>
+    <username>${anypoint.username}</username>
+    <password>${anypoint.password}</password>
+    <environment>${env}</environment>
+    <applicationName>${appname}</applicationName>
+    <businessGroup>${business}</businessGroup>
+    <workerType>${vCore}</workerType>
+    <workers>${workers}</workers>
+    <objectStoreV2>true</objectStoreV2>
+</cloudHubDeployment>
+
              <classifier>mule-application</classifier>
                </configuration>
 			</plugin>
